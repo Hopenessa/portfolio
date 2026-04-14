@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import backgroundImg from "../assets/images/background1.svg";
 
-export const HeroSection = styled.section`
+export const PreviewSection = styled.section`
   height: 100vh;
   background: #0d0e1b;
 
@@ -10,7 +10,7 @@ export const HeroSection = styled.section`
   align-items: center;
 `;
 
-export const Container = styled.div`
+export const PreviewContainer = styled.div`
     width: 1099px;
     height: 526px;
 
@@ -32,7 +32,7 @@ export const Right = styled.div`
   justify-content: center;
 `;
 
-export const Label = styled.div`
+export const PreviewLabel = styled.div`
   font-family: Tinos, serif;
   font-weight: 400;
   font-size: 20px;
@@ -40,7 +40,7 @@ export const Label = styled.div`
   line-height: 100%;
 `;
 
-export const Name = styled.h1`
+export const PreviewName = styled.h1`
   font-family: Montserrat, sans-serif;
   font-weight: 600;
   font-size: 72px;
@@ -51,7 +51,7 @@ export const Name = styled.h1`
   -webkit-text-fill-color: transparent;
 `;
 
-export const Text = styled.p`
+export const PreviewText = styled.p`
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -60,13 +60,13 @@ export const Text = styled.p`
   color: #BDEBEA;
 `;
 
-export const Image = styled.img`
+export const PreviewImage = styled.img`
     width: 500px;
     height: 500px;
     object-fit: cover;
 `;
 
-export const Button = styled.button`
+export const PreviewButton = styled.button`
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     
@@ -95,7 +95,7 @@ export const Button = styled.button`
     }
 `;
 
-export const PageWrapper = styled.div`
+export const PreviewWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
 

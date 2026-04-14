@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "../assets/images/background3.svg"
 
-export const Section = styled.section`
+export const ContactsSection = styled.section`
     width: 100%;
     min-height: 100vh;
 
@@ -15,7 +15,7 @@ export const Section = styled.section`
     padding-bottom: 100px;
 `;
 
-export const Title = styled.h2`
+export const ContactsTitle = styled.h2`
   margin: 0 0 40px 0;
 
   font-family: Montserrat, sans-serif;
@@ -36,7 +36,7 @@ export const FormWrapper = styled.div`
   gap: 20px;
 `;
 
-export const Row = styled.div`
+export const FormRow = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
@@ -75,7 +75,7 @@ export const Textarea = styled.textarea`
   outline: none;
 `;
 
-export const Button = styled.button`
+export const ContactsButton = styled.button`
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     
@@ -102,7 +102,7 @@ export const Button = styled.button`
   }
 `;
 
-export const Label = styled.div`
+export const FormLabel = styled.div`
   width: 100px;
 
   font-family: Montserrat, sans-serif;

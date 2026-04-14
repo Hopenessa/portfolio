@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
+export const DescriptionSection = styled.section`
   width: 100%;
   background: #07070f;
     padding-top: 100px;
@@ -12,7 +12,7 @@ export const Section = styled.section`
   justify-content: center;
 `;
 
-export const Title = styled.h2`
+export const DescriptionTitle = styled.h2`
   font-family: Montserrat, sans-serif;
   font-weight: 600;
   font-size: 27px;

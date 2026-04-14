@@ -1,37 +1,37 @@
 import {
-    Section,
-    Title,
+    ContactsSection,
+    ContactsTitle,
     FormWrapper,
-    Row,
-    Label,
+    FormRow,
+    FormLabel,
     Input,
     Textarea,
-    Button
+    ContactsButton
 } from "./Contacts.styles";
 
 export default function Contacts(): JSX.Element {
     return (
-        <Section>
-            <Title>Contact me</Title>
+        <ContactsSection>
+            <ContactsTitle>Contact me</ContactsTitle>
 
             <FormWrapper>
-                <Row>
-                    <Label>Email</Label>
+                <FormRow>
+                    <FormLabel>Email</FormLabel>
                     <Input type="text" />
-                </Row>
+                </FormRow>
 
-                <Row>
-                    <Label>Subject</Label>
+                <FormRow>
+                    <FormLabel>Subject</FormLabel>
                     <Input type="text" />
-                </Row>
+                </FormRow>
 
-                <Row>
-                    <Label>Content</Label>
+                <FormRow>
+                    <FormLabel>Content</FormLabel>
                     <Textarea />
-                </Row>
+                </FormRow>
 
-                <Button>Send</Button>
+                <ContactsButton>Send</ContactsButton>
             </FormWrapper>
-        </Section>
+        </ContactsSection>
     );
 }

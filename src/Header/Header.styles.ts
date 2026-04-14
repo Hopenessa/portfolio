@@ -20,12 +20,12 @@ export const HeaderWrapper = styled.header`
   z-index: 1000;
 `;
 
-export const Nav = styled.nav`
+export const HeaderNav = styled.nav`
   display: flex;
   gap: 40px;
 `;
 
-export const NavItem = styled.div<{ $active?: boolean }>`
+export const HeaderNavItem = styled.div<{ $active?: boolean }>`
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;

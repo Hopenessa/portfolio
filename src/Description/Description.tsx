@@ -1,13 +1,13 @@
 import {
-    Section,
-    Title,
+    DescriptionSection,
+    DescriptionTitle,
     DescriptionText
 } from "./Description.styles";
 
 export default function Description(): JSX.Element {
     return (
-        <Section>
-            <Title>About me</Title>
+        <DescriptionSection>
+            <DescriptionTitle>About me</DescriptionTitle>
 
             <DescriptionText>
                 The long barrow was built on land previously inhabited in the Mesolithic period.
@@ -17,6 +17,6 @@ export default function Description(): JSX.Element {
                 within this chamber during the Neolithic period, representing at least
                 nine or ten individuals.
             </DescriptionText>
-        </Section>
+        </DescriptionSection>
     );
 }

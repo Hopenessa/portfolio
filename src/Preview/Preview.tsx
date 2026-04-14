@@ -1,40 +1,40 @@
 import {
-    HeroSection,
-    Container,
+    PreviewSection,
+    PreviewContainer,
     Left,
-    Label,
-    Name,
-    Text,
-    Image,
-    Button,
-    PageWrapper,
+    PreviewLabel,
+    PreviewName,
+    PreviewText,
+    PreviewImage,
+    PreviewButton,
+    PreviewWrapper,
     Right
 } from "./Preview.styles";
 import Avatar from "../assets/images/avatar.webp";
 
 export default function Preview(): JSX.Element {
     return (
-        <PageWrapper>
-        <HeroSection>
-            <Container>
+        <PreviewWrapper>
+        <PreviewSection>
+            <PreviewContainer>
                 <Left>
-                    <Label>WEB DEVELOPER</Label>
+                    <PreviewLabel>WEB DEVELOPER</PreviewLabel>
 
-                    <Name>John Doe</Name>
+                    <PreviewName>John Doe</PreviewName>
 
-                    <Text>
+                    <PreviewText>
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
                         sint. Velit officia consequat duis enim velit mollit. Exercitation
                         veniam consequat sunt.
-                    </Text>
-                    <Button>Contact me</Button>
+                    </PreviewText>
+                    <PreviewButton>Contact me</PreviewButton>
                 </Left>
 
                 <Right>
-                    <Image src={Avatar} alt="profile" />
+                    <PreviewImage src={Avatar} alt="profile" />
                 </Right>
-            </Container>
-        </HeroSection>
-        </PageWrapper>
+            </PreviewContainer>
+        </PreviewSection>
+        </PreviewWrapper>
     );
 }

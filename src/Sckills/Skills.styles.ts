@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
+export const SkillsSection = styled.section`
     width: 100%;
     background: #0d0e1b;
 
@@ -14,7 +14,7 @@ export const Section = styled.section`
     padding-bottom: 50px;
 `;
 
-export const Row = styled.div`
+export const SkillsRow = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +36,7 @@ export const Circle = styled.div`
 `;
 
 
-export const Title = styled.h2`
+export const SkillsTitle = styled.h2`
     margin: 0;
     font-family: Montserrat, sans-serif;
     font-weight: 600;

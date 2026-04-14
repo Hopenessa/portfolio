@@ -1,8 +1,8 @@
 import {
-    Section,
-    Row,
+    SkillsSection,
+    SkillsRow,
     Circle,
-    Title
+    SkillsTitle
 } from "./Skills.styles";
 
 import { Icon } from "../Icon/Icon";
@@ -18,16 +18,16 @@ const icons = [
 
 export default function Skills(): JSX.Element {
     return (
-        <Section>
-            <Title>My skills</Title>
+        <SkillsSection>
+            <SkillsTitle>My skills</SkillsTitle>
 
-            <Row>
+            <SkillsRow>
                 {icons.map((id) => (
                     <Circle key={id}>
                         <Icon id={id} width={50} height={50} />
                     </Circle>
                 ))}
-            </Row>
-        </Section>
+            </SkillsRow>
+        </SkillsSection>
     );
 }
