@@ -5,13 +5,11 @@ export const SkillsSection = styled.section`
     background: #0d0e1b;
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; //вертикальная последовательность
+    align-items: center; //центрирование >
 
     gap: 60px;
-
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: clamp(60px, 8vw, 100px) 0; //отступы в зависимости от ширины экрана
 `;
 
 
@@ -19,8 +17,8 @@ export const SkillsTitle = styled.h2`
     margin: 0;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 27px;
-    line-height: 26px;
+    font-size: 1.5rem;
+    line-height: 120%;
     letter-spacing: 0.04em;
 
     color: #e5f8f1;
@@ -29,22 +27,25 @@ export const SkillsTitle = styled.h2`
 `;
 
 export const SkillsRow = styled.div`
-    display: flex;
+    display: flex; //центрирование ^ >
     justify-content: center;
     align-items: center;
 
-    gap: 50px;
-    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 900px;
+
+    gap: clamp(20px, 4vw, 50px); //зависимость отступов от ширины экрана
+    flex-wrap: wrap; //разрешен перенос на другую строку 
 `;
 
 export const Circle = styled.div`
   width: 80px;
   height: 80px;
 
-  border-radius: 50%;
+  border-radius: 50%; //делаем круг
   background: #0f1720;
 
-  display: flex;
+  display: flex; //центрирование внутри круга ^ >
   align-items: center;
   justify-content: center;
 `;

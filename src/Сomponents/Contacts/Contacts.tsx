@@ -2,7 +2,6 @@ import {
     ContactsSection,
     ContactsTitle,
     FormWrapper,
-    FormRow,
     FormLabel,
     Input,
     Textarea
@@ -15,20 +14,14 @@ export default function Contacts(): JSX.Element {
             <ContactsTitle>Contact me</ContactsTitle>
 
             <FormWrapper>
-                <FormRow>
-                    <FormLabel>Email : </FormLabel>
-                    <Input type="text" />
-                </FormRow>
+                <FormLabel>Email :</FormLabel>
+                <Input $row={1} />
 
-                <FormRow>
-                    <FormLabel>Subject : </FormLabel>
-                    <Input type="text" />
-                </FormRow>
+                <FormLabel>Subject :</FormLabel>
+                <Input $row={2} />
 
-                <FormRow>
-                    <FormLabel>Content : </FormLabel>
-                    <Textarea />
-                </FormRow>
+                <FormLabel>Content :</FormLabel>
+                <Textarea />
             </FormWrapper>
             <Button>Send</Button>
         </ContactsSection>

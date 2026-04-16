@@ -1,13 +1,13 @@
 import {
     PreviewSection,
     PreviewContainer,
-    Left,
+    Text,
     PreviewLabel,
     PreviewName,
     PreviewText,
     PreviewImage,
     PreviewWrapper,
-    Right
+    Img
 } from "./Preview.styles.ts";
 import {Button} from "../Shared/Button.ts";
 import Avatar from "../../assets/images/avatar.webp";
@@ -17,7 +17,7 @@ export default function Preview(): JSX.Element {
         <PreviewWrapper>
         <PreviewSection>
             <PreviewContainer>
-                <Left>
+                <Text>
                     <PreviewLabel>WEB DEVELOPER</PreviewLabel>
 
                     <PreviewName>John Doe</PreviewName>
@@ -28,11 +28,11 @@ export default function Preview(): JSX.Element {
                         veniam consequat sunt.
                     </PreviewText>
                     <Button>Contact me</Button>
-                </Left>
+                </Text>
 
-                <Right>
+                <Img>
                     <PreviewImage src={Avatar} alt="profile" />
-                </Right>
+                </Img>
             </PreviewContainer>
         </PreviewSection>
         </PreviewWrapper>
