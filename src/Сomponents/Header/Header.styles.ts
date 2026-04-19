@@ -14,9 +14,7 @@ export const HeaderWrapper = styled.header`
 
   background: #090a14;
 
-  display: flex; //центирует содержимое ^ >
-  align-items: center;
-  justify-content: center;
+
 
   box-shadow: 0 0 10px 1px #00D9F5;  //тень дающая эффект свечения
 
@@ -24,8 +22,17 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const HeaderNav = styled.nav`
+  width: 100%;
+  height: 100%;
+  display: flex; //центирует содержимое ^ >
+  align-items: center;
+  justify-content: center;
+`;
+
+export const HeaderNavList = styled.ul`
   display: flex; //элементы в ряд
   gap: 40px; //расстояние между элементами
+  list-style: none;
 `;
 
 export const HeaderNavItem = styled.a<{ $active?: boolean }>`

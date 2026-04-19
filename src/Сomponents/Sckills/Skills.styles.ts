@@ -24,6 +24,7 @@ export const SkillsTitle = styled.h2`
     color: #e5f8f1;
 
     text-align: center;
+    display: none;
 `;
 
 export const SkillsRow = styled.div`
@@ -39,15 +40,5 @@ export const SkillsRow = styled.div`
     padding: 0 20px;
 `;
 
-export const Circle = styled.div`
-  width: 80px;
-  height: 80px;
 
-  border-radius: 50%; //делаем круг
-  background: #0f1720;
-
-  display: flex; //центрирование внутри круга ^ >
-  align-items: center;
-  justify-content: center;
-`;
 

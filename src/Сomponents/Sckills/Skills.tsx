@@ -1,7 +1,6 @@
 import {
     SkillsSection,
     SkillsRow,
-    Circle,
     SkillsTitle
 } from "./Skills.styles.ts";
 
@@ -23,9 +22,7 @@ export default function Skills(): JSX.Element {
 
             <SkillsRow>
                 {icons.map((id) => (
-                    <Circle key={id}>
-                        <Icon id={id} width={50} height={50} />
-                    </Circle>
+                    <Icon key={id} id={id} width={80} height={80} viewBox={"0 0 150 150"}/>
                 ))}
             </SkillsRow>
         </SkillsSection>

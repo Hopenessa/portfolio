@@ -1,8 +1,8 @@
-import { useState } from "react";
+import {useState} from "react";
 import {
     HeaderNav,
     HeaderWrapper,
-    HeaderNavItem
+    HeaderNavItem, HeaderNavList
 } from "./Header.styles.ts";
 
 const items = ["HOME", "ABOUT ME", "SKILLS", "CONTACTS"];
@@ -13,15 +13,19 @@ export default function Header(): JSX.Element {
     return (
         <HeaderWrapper>
             <HeaderNav>
-                {items.map((item) => (
-                    <HeaderNavItem
-                        key={item}
-                        $active={active === item}
-                        onClick={() => setActive(item)}
-                    >
-                        {item}
-                    </HeaderNavItem>
-                ))}
+                <HeaderNavList>
+                    {items.map((item) => (
+                        <li key={item}>
+                            <HeaderNavItem
+                                key={item}
+                                $active={active === item}
+                                onClick={() => setActive(item)}
+                            >
+                                {item}
+                            </HeaderNavItem>
+                        </li>
+                    ))}
+                </HeaderNavList>
             </HeaderNav>
         </HeaderWrapper>
     );

@@ -57,7 +57,7 @@ export const PreviewLabel = styled.h1`
     margin: 0;
 `;
 
-export const PreviewName = styled.h2`
+export const PreviewName = styled.span`
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     font-size: 4.5rem;

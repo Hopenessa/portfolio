@@ -30,7 +30,7 @@ export const ContactsTitle = styled.h2`
 
 `;
 
-export const FormWrapper = styled.div`
+export const FormWrapper = styled.form`
     width: 100%;
     max-width:700px;
     height: auto;
@@ -46,7 +46,7 @@ export const FormWrapper = styled.div`
     
 `;
 
-export const FormLabel = styled.div`
+export const FormLabel = styled.label`
 
     grid-column: 1;
     display: flex;
