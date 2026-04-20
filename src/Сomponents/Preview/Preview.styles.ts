@@ -3,7 +3,7 @@ import backgroundImg from "../../assets/images/background1.svg";
 
 export const PreviewWrapper = styled.div`
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
 
     background-image: url(${backgroundImg});
     background-size: cover; //масштабирование изображения
@@ -16,7 +16,7 @@ export const PreviewWrapper = styled.div`
 `;
 
 export const PreviewSection = styled.section`
-    height: 100vh;
+    height: 90vh;
     background: #0d0e1b;
 
     display: flex; //снова центрирование содержимого ^ >
