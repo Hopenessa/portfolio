@@ -4,7 +4,8 @@ import {
     FormWrapper,
     FormLabel,
     Input,
-    Textarea
+    Textarea,
+    FrameWrapper
 } from "./Contacts.styles.ts";
 import {Button} from "../Shared/Button.ts";
 import {Frame} from "../sprites/Frame.tsx";
@@ -12,7 +13,7 @@ import {Frame} from "../sprites/Frame.tsx";
 export default function Contacts(): JSX.Element {
     return (
         <ContactsSection>
-            <Frame id="FrameUp" viewBox="0 0 1894 74"/>
+            <Frame id="Frame" viewBox="0 0 1894 74" svgColor="#0d0e1b" isLookUp={false} flippedHorizontal={false}/>
             <ContactsTitle>Contact me</ContactsTitle>
             <FormWrapper>
                 <FormLabel>Email :</FormLabel>
@@ -25,6 +26,9 @@ export default function Contacts(): JSX.Element {
                 <Textarea placeholder="Enter your message"/>
             </FormWrapper>
             <Button>Send</Button>
+            <FrameWrapper>
+            <Frame id="Frame" viewBox="0 0 1894 74" svgColor="#07070f" isLookUp={true} flippedHorizontal={false}/>
+            </FrameWrapper>
         </ContactsSection>
     );
 }

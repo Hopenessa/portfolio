@@ -2,9 +2,10 @@ import './App.css'
 import Preview from "./Сomponents/Preview/Preview.tsx";
 import Header from "./Сomponents/Header/Header.tsx";
 import Description from "./Сomponents/Description/Description.tsx";
-import Skills from "./Сomponents/Sckills/Skills.tsx";
+import Skills from "./Сomponents/Skills/Skills.tsx";
 import Contacts from "./Сomponents/Contacts/Contacts.tsx";
 import {GlobalStyle} from "./styles/GlobalStyles.ts";
+import Footer from "./Сomponents/Footer/Footer.tsx";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <Description/>
             <Skills/>
             <Contacts/>
+            <Footer/>
         </div>
     )
 }

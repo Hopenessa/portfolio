@@ -4,6 +4,8 @@ import backgroundImg from "../../assets/images/background1.svg";
 export const PreviewWrapper = styled.div`
     width: 100%;
     min-height: 90vh;
+    
+    position: relative; //родительский контейнер
 
     background-image: url(${backgroundImg});
     background-size: cover; //масштабирование изображения
@@ -15,13 +17,24 @@ export const PreviewWrapper = styled.div`
     align-items: center;
 `;
 
+export const FrameWrapper = styled.div`
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    width: 100%;
+`;
+
 export const PreviewSection = styled.section`
     height: 90vh;
-    background: #0d0e1b;
+    
+    backdrop-filter: blur(10px);
+    background: rgba(13, 14, 27, 0.85);
 
     display: flex; //снова центрирование содержимого ^ >
     justify-content: center;
     align-items: center;
+    
 `;
 
 export const PreviewContainer = styled.div`
@@ -51,7 +64,7 @@ export const Img = styled.div`
 export const PreviewLabel = styled.h1`
     font-family: Tinos, serif;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     color: #D7E5EC;
     line-height: 100%;
     margin: 0;
@@ -60,7 +73,7 @@ export const PreviewLabel = styled.h1`
 export const PreviewName = styled.span`
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 4.5rem;
+    font-size: clamp(1.5rem, 5vw, 4.5rem);
     line-height: 100%;
     margin: 0;
 
@@ -80,8 +93,8 @@ export const PreviewText = styled.p`
 `;
 
 export const PreviewImage = styled.img`
-    width: 500px;
-    height: 500px;
+    width: clamp(300px, 30vw, 500px);
+    height: clamp(300px, 30vw, 500px);
     object-fit: cover;
 `;
 

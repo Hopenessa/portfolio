@@ -9,7 +9,7 @@ type IconProps = {
     viewBox: string;
 };
 
-export const Icon = ({id, width = 150, height = 150,viewBox}: IconProps) => {
+export const Icon = ({id, width = 150, height = 150, viewBox,}: IconProps) => {
     return (
         <StyledSvg width={width} height={height} viewBox={viewBox}>
             <use href={`${sprite}#${id}`}/>  {/*на старых браузерах все равно потребуется xlinkHref*/}

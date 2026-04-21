@@ -3,12 +3,10 @@ import {
     DescriptionTitle,
     DescriptionText
 } from "./Description.styles.ts";
-import {Frame} from "../sprites/Frame.tsx";
 
 export default function Description(): JSX.Element {
     return (
         <DescriptionSection>
-            <Frame id="FrameUp" viewBox="0 0 1894 74"/>
             <DescriptionTitle>About me</DescriptionTitle>
             <DescriptionText>
                 The long barrow was built on land previously inhabited in the Mesolithic period.

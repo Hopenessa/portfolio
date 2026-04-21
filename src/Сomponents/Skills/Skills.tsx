@@ -20,7 +20,7 @@ const icons = [
 export default function Skills(): JSX.Element {
     return (
         <SkillsSection>
-            <Frame id="FrameUpDark" viewBox="0 0 1894 74"/>
+            <Frame id="Frame" viewBox="0 0 1894 74" svgColor="#07070f" isLookUp={false} flippedHorizontal={false}/>
             <SkillsTitle>My skills</SkillsTitle>
             <SkillsRow>
                 {icons.map((id) => (

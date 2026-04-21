@@ -7,10 +7,11 @@ import {
     PreviewText,
     PreviewImage,
     PreviewWrapper,
-    Img
+    Img, FrameWrapper
 } from "./Preview.styles.ts";
 import {Button} from "../Shared/Button.ts";
 import Avatar from "../../assets/images/avatar.svg";
+import {Frame} from "../sprites/Frame.tsx";
 
 export default function Preview(): JSX.Element {
     return (
@@ -35,6 +36,9 @@ export default function Preview(): JSX.Element {
                 </Img>
             </PreviewContainer>
         </PreviewSection>
+            <FrameWrapper>
+                <Frame id="Frame" viewBox="0 0 1894 74" svgColor="#07070f" isLookUp={true} flippedHorizontal={true}/>
+            </FrameWrapper>
         </PreviewWrapper>
     );
 }

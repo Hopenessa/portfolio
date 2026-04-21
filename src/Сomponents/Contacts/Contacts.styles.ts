@@ -13,6 +13,16 @@ export const ContactsSection = styled.section`
     display: flex; //центрирование >
     flex-direction: column; //элементы по вертикали
     align-items: center;
+
+    position: relative; //родительский контейнер
+`;
+
+export const FrameWrapper = styled.div`
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    width: 100%;
 `;
 
 export const ContactsTitle = styled.h2`
