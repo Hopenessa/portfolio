@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Image from "../../assets/images/background3.svg"
+import Image from "../../assets/images/backgroundContacts.svg"
 
 export const ContactsSection = styled.section`
     width: 100%;

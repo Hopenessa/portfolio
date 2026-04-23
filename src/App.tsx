@@ -3,7 +3,6 @@ import Preview from "./Сomponents/Preview/Preview.tsx";
 import Header from "./Сomponents/Header/Header.tsx";
 import Description from "./Сomponents/Description/Description.tsx";
 import Skills from "./Сomponents/Skills/Skills.tsx";
-import Contacts from "./Сomponents/Contacts/Contacts.tsx";
 import {GlobalStyle} from "./styles/GlobalStyles.ts";
 import Footer from "./Сomponents/Footer/Footer.tsx";
 
@@ -13,9 +12,8 @@ function App() {
             <GlobalStyle />
             <Header/>
             <Preview/>
-            <Description/>
             <Skills/>
-            <Contacts/>
+            <Description/>
             <Footer/>
         </div>
     )

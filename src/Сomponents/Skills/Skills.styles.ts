@@ -2,13 +2,10 @@ import styled from "styled-components";
 
 export const SkillsSection = styled.section`
     width: 100%;
-    background: #0d0e1b;
+    background: #07070f;
 
     display: flex;
-    flex-direction: column; //вертикальная последовательность
-    align-items: center; //центрирование >
-
-    gap: 60px;
+    
     
 `;
 
@@ -16,7 +13,7 @@ export const SkillsTitle = styled.h2`
     margin: 0;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 120%;
     letter-spacing: 0.04em;
 
@@ -36,7 +33,7 @@ export const SkillsRow = styled.div`
 
     gap: clamp(20px, 4vw, 50px); //зависимость отступов от ширины экрана
     flex-wrap: wrap; //разрешен перенос на другую строку
-    padding: clamp(40px, 4vw, 40px) 20px clamp(40px, 4vw, 70px) 20px; //отступы в зависимости от ширины экрана
+    padding: clamp(40px, 4vw, 70px) 20px; //отступы в зависимости от ширины экрана
 `;
 
 

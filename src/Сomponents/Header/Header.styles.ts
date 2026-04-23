@@ -1,35 +1,33 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
-  position: fixed; //фиксированая позиция вверху экрана
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  
-  margin: 0 auto; //центирует фиксированную ширину
 
   width: 100%;
-  /*max-width: 1400px;*/
   height: 70px;
 
   background: #090a14;
-  
-  box-shadow: 0 0 10px 1px #00D9F5;  //тень дающая эффект свечения
+  box-shadow: 0 0 50px 10px #000000;
 
-  z-index: 1000; //всегда по верх других элементов
+  z-index: 1000;
+  
+  display: flex;
 `;
 
 export const HeaderNav = styled.nav`
   width: 100%;
-  height: 100%;
-  display: flex; //центирует содержимое ^ >
-  align-items: center;
-  justify-content: center;
 `;
 
 export const HeaderNavList = styled.ul`
-  display: flex; //элементы в ряд
-  gap: clamp(30px, 5vw, 60px); //расстояние между элементами
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  gap: clamp(30px, 5vw, 60px);
   list-style: none;
 `;
 
@@ -40,15 +38,17 @@ export const HeaderNavItem = styled.a<{ $active?: boolean }>`
   text-transform: uppercase; //все буквы заглавные
   font-family: 'Oswald', sans-serif; //стиль текста
 
-  color: #00F5A0;
+  color: #ff9200;
+
+  display: block;
 
   transition: color 0.2s ease, text-shadow 0.2s ease; //задаем правила анимации
-  
-  ${({ $active }) => {
+
+  ${({$active}) => {
     if ($active) {
       return `
-      color: #00D9F5;
-      text-shadow: 0 0 10px #00D9F5;
+      color: #ff9200;
+      text-shadow: 0 0 20px #ff6200;
     `;
     }
     return "";
