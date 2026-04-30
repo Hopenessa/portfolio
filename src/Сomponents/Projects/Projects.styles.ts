@@ -15,7 +15,7 @@ export const ProjectsTitle = styled.h2`
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     letter-spacing: 0.04em;
-    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     line-height: 100%;
 
     color: #ffffff;

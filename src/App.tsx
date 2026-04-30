@@ -7,6 +7,7 @@ import {GlobalStyle} from "./styles/GlobalStyles.ts";
 import Footer from "./Сomponents/Footer/Footer.tsx";
 import Projects from "./Сomponents/Projects/Projects.tsx";
 import BurgerHeader from "./Сomponents/Header/MobileMenu/BurgerHeader.tsx";
+import GoTopButton from "./Сomponents/GoTopButton/GoTopButton.tsx";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
             <Skills/>
             <Description/>
             <Footer/>
+            <GoTopButton/>
         </div>
     )
 }

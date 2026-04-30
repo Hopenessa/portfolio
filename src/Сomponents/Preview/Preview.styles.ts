@@ -69,6 +69,9 @@ export const PreviewLabel = styled.h1`
     font-size: clamp(1.3rem, 2vw, 3.5rem);
     color: #ffffff;
     line-height: 100%;
+    p {
+        display: none;
+    }
 `;
 
 export const PreviewName = styled.span`

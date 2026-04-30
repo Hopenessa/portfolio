@@ -1,3 +1,4 @@
+import Typewriter from 'typewriter-effect';
 import {
     PreviewContainer,
     TextSection,
@@ -24,7 +25,19 @@ export default function Preview(): JSX.Element {
                 <FlexWrapper $direction="row">
                     <PreviewContainer>
                         <TextSection>
-                            <PreviewLabel>WEB DEVELOPER</PreviewLabel>
+                            <PreviewLabel>
+                                <p>WEB DEVELOPER</p>
+                                <Typewriter
+                                    options={{
+                                        cursor: ""
+                                    }}
+
+                                    onInit={(typewriter) => {
+                                        typewriter.typeString('WEB DEVELOPER').start();
+
+                                    }}
+                                />
+                            </PreviewLabel>
                             <PreviewName>Hopenesa</PreviewName>
                             <PreviewText>
                                 Frontend developer building web applications with React and TypeScript. I focus on
@@ -33,7 +46,6 @@ export default function Preview(): JSX.Element {
                             </PreviewText>
                             <LinkButton onClick={() => scrollToSection("contacts")}>Contact me</LinkButton>
                         </TextSection>
-
                         <PreviewImage src={Avatar} alt="profile"/>
                     </PreviewContainer>
                 </FlexWrapper>
