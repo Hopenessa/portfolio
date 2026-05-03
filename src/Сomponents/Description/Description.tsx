@@ -6,7 +6,7 @@ import {
 import {Frame} from "../sprites/Frame.tsx";
 import {Container} from "../Shared/Container.ts";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
-import { Fade } from "react-awesome-reveal";
+import {Fade} from "react-awesome-reveal";
 
 
 export default function Description() {
@@ -21,12 +21,16 @@ export default function Description() {
                         <Fade direction={"down"} triggerOnce={true}>
                             <DescriptionTitle>About me</DescriptionTitle>
                             <DescriptionText>
-                                The long barrow was built on land previously inhabited in the Mesolithic period.
-                                It consisted of a sub-rectangular earthen tumulus, estimated to have been
-                                15 metres (50 feet) in length, with a chamber built from megaliths
-                                on its eastern end. Both and cremated human remains were placed
-                                within this chamber during the Neolithic period, representing at least
-                                nine or ten individuals.
+                                Hello everyone! My name is Nadezhda, and I am a web developer from Russia.
+
+                                I’m currently at an early stage of my development journey, but I’ve already gained
+                                practical experience with React, TypeScript, and Styled Components, along with other
+                                modern frontend tools. I focus on building clean, responsive interfaces and continuously
+                                improving my skills through hands-on projects.
+
+                                Right now I’m actively strengthening my knowledge and working on expanding my portfolio
+                                with real-world projects. I’m motivated to grow as a developer and open to collaboration
+                                and new opportunities.
                             </DescriptionText>
                         </Fade>
                     </ContentWrapper>
