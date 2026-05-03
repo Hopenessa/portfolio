@@ -28,8 +28,14 @@ export default function BurgerHeader(): JSX.Element {
     const [active, setActive] = useState("HOME");
 
     useEffect(() => {
-        const sections = document.querySelectorAll("section, header, footer");
+        const sections = document.querySelectorAll("section, footer");
         const projectsSection = document.getElementById("projects");
+
+        const handleScroll = () => {
+            if (window.scrollY < 100) {
+                setActive("HOME");
+            }
+        };
 
         const defaultObserver = new IntersectionObserver(
             (entries) => {
@@ -73,6 +79,7 @@ export default function BurgerHeader(): JSX.Element {
         return () => {
             defaultObserver.disconnect();
             projectsObserver.disconnect();
+            window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
@@ -80,7 +87,7 @@ export default function BurgerHeader(): JSX.Element {
     return (
         <MobileMenuWrapper>
             <BurgerButton
-                isOpen={menuIsOpen}
+                $isOpen={menuIsOpen}
                 onClick={toggleMenu}
             >
                 <Icon
@@ -93,7 +100,7 @@ export default function BurgerHeader(): JSX.Element {
                 />
             </BurgerButton>
 
-            <MobileMenuPopup isOpen={menuIsOpen}>
+            <MobileMenuPopup $isOpen={menuIsOpen}>
                 <CloseButton onClick={closeMenu}>
                     <Icon
                         id="xSvg"

@@ -4,11 +4,11 @@ import styled from "styled-components";
 import { Theme } from "../../../styles/Theme.ts";
 
 type BurgerButtonProps = {
-    isOpen: boolean;
+    $isOpen: boolean;
 };
 
 type MobileMenuPopupProps = {
-    isOpen: boolean;
+    $isOpen: boolean;
 };
 
 export const MobileMenuWrapper = styled.div`
@@ -71,8 +71,8 @@ export const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
     background: #090a14;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
 
-    transform: ${({ isOpen }) =>
-    isOpen ? "translateX(0)" : "translateX(100%)"};
+    transform: ${({ $isOpen }) =>
+            $isOpen ? "translateX(0)" : "translateX(100%)"};
 
     transition: transform 0.3s ease;
 

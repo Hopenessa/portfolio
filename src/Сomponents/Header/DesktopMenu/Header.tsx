@@ -31,7 +31,7 @@ export default function Header(): JSX.Element {
                 });
             },
             {
-                threshold: 0.6
+                rootMargin: "-50% 0px -50% 0px"
             }
         );
 
@@ -44,7 +44,7 @@ export default function Header(): JSX.Element {
                 });
             },
             {
-                threshold: 0.4
+                rootMargin: "-50% 0px -50% 0px"
             }
         );
 
@@ -65,7 +65,7 @@ export default function Header(): JSX.Element {
     }, []);
 
     return (
-        <HeaderWrapper id="home">
+        <HeaderWrapper>
             <Container>
                 <FlexWrapper $direction="row">
                     <HeaderNav>

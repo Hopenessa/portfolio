@@ -3,7 +3,7 @@ export const scrollToSection = (id: string) => {
     if (!el) return;
     let blockPosition: ScrollLogicalPosition = "center";
 
-    if (id == "projects") blockPosition = "start";
+    if (id == "projects" || id == "home") blockPosition = "start";
 
     el.scrollIntoView({
         behavior: "smooth",
