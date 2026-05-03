@@ -30,8 +30,6 @@ export default function BurgerHeader(): JSX.Element {
     useEffect(() => {
         const sections = document.querySelectorAll("section, header, footer");
         const projectsSection = document.getElementById("projects");
-        const headerSection = document.getElementById("header");
-
 
         const defaultObserver = new IntersectionObserver(
             (entries) => {
@@ -45,7 +43,7 @@ export default function BurgerHeader(): JSX.Element {
                 });
             },
             {
-                threshold: 0.5
+                threshold: 0.6
             }
         );
 
@@ -62,19 +60,6 @@ export default function BurgerHeader(): JSX.Element {
             }
         );
 
-        const headerObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActive("PROJECTS");
-                    }
-                });
-            },
-            {
-                threshold: 0.3
-            }
-        );
-
         sections.forEach((section) => {
             if (section.id !== "projects") {
                 defaultObserver.observe(section);
@@ -85,14 +70,9 @@ export default function BurgerHeader(): JSX.Element {
             projectsObserver.observe(projectsSection);
         }
 
-        if (headerSection) {
-            headerObserver.observe(headerSection);
-        }
-
         return () => {
             defaultObserver.disconnect();
             projectsObserver.disconnect();
-            headerObserver.disconnect();
         };
     }, []);
 

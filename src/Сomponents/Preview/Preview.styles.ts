@@ -101,7 +101,7 @@ export const PreviewImage = styled.img`
     object-fit: cover;
 
     @media (max-width: 700px) {
-        width: clamp(300px, 30vw, 400px);
+        width: clamp(250px, 30vw, 400px);
     }
 `;
 

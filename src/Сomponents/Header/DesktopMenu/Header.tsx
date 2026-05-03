@@ -65,7 +65,7 @@ export default function Header(): JSX.Element {
     }, []);
 
     return (
-        <HeaderWrapper>
+        <HeaderWrapper id="home">
             <Container>
                 <FlexWrapper $direction="row">
                     <HeaderNav>
