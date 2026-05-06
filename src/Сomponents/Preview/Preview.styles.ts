@@ -43,7 +43,7 @@ export const PreviewContainer = styled.div`
 
     
     
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         flex-direction: column-reverse;
         justify-content: center;
         gap: 0;
@@ -60,7 +60,7 @@ export const TextSection = styled.div`
 
     flex: 1 1 300px;
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         align-items: center;
     }
 `;
@@ -135,10 +135,9 @@ export const LinkButton = styled.a`
     padding: 0 20px;
 
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    transition: transform 0.2s ease;
 
     &:hover {
-        box-shadow: 0 0 10px #ffc400;
         transform: scale(1.1);
         background: linear-gradient(90deg, #ffcc00 0%, #ff6200 100%)
     }
