@@ -40,7 +40,7 @@ export default function Preview(): JSX.Element {
                                     }}
                                 />
                             </PreviewLabel>
-                            <PreviewName>Hopenesa</PreviewName>
+                            <PreviewName>Hopenessa</PreviewName>
                             <PreviewText>
                                 Frontend developer building web applications with React and TypeScript. I focus on
                                 creating structured, maintainable and responsive interfaces. I care about performance
