@@ -41,16 +41,9 @@ export const ProjectsTitle = styled.h2`
 
 export const ProjectsGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 350px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
     gap: 30px;
     margin-bottom: 20px;
-
-    @media (max-width: 1200px) {
-        grid-template-columns: repeat(2, 350px);
-    }
-
-    @media (max-width: 800px) {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
+    
 `;

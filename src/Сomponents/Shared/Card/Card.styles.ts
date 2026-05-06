@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {Theme} from "../../../styles/Theme.ts";
 
 export const CardSection = styled.div`
-    width: 350px;
     height: 500px;
 
     background: #0D0E1B;
