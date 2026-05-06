@@ -28,13 +28,11 @@ export const Icon = ({id, width = 150, height = 150, viewBox, iconColor, iconHov
 
 const StyledSvg = styled.svg<IconStyledProps>`
     ${({ $iconColor }) => `color: ${$iconColor || "#FFFFFF3F"};`}
-    /*color: #FFFFFF3F;*/
 
     transition: color 0.2s ease, transform 0.3s ease;
 
     &:hover {
         ${({ $iconHover }) => `pointer-events: ${$iconHover || "visible"};`}
-        /*pointer-events: visible;*/
         color: #ff9200;
         transform: scale(1.3);
         transform-origin: center;
