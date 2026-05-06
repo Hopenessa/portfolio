@@ -77,12 +77,12 @@ export const Input = styled.input`
     height: 40px;
     width: 100%;
 
-    border: 1px solid rgba(255, 255, 255, 0.64);
+    border: 1px solid #777795;
     border-radius: 8px;
 
     padding: 0 0.5rem;
 
-    background: rgba(255, 255, 255, 0.1);
+    background: #0D0E1B;
 
     color: white;
     outline: none;
@@ -96,12 +96,12 @@ export const Textarea = styled.textarea`
     min-height: clamp(150px, 25vh, 160px);
     width: 100%;
 
-    border: 1px solid rgba(255, 255, 255, 0.60);
+    border: 1px solid #777795;
     border-radius: 8px;
 
     padding: 0.5rem;
 
-    background: rgba(255, 255, 255, 0.1);
+    background: #0D0E1B;
     color: white;
     resize: none;
     outline: none;
