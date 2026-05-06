@@ -76,7 +76,7 @@ export default function Header(): JSX.Element {
                             width={50}
                             height={50}
                             viewBox="0 0 454 454"
-                            iconColor="#ffffff"
+                            iconColor=""
                             iconHover="none"
                         />
                     </LogoWrapper>
