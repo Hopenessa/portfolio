@@ -25,10 +25,9 @@ export const Button = styled.button`
     cursor: pointer;
 
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    transition: box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
 
     &:hover {
-        box-shadow: 0 0 10px #ffc400;
         transform: scale(1.1);
         transform-origin: center;
         background: linear-gradient(90deg, #ffcc00 0%, #ff6200 100%)
