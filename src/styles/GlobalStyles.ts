@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0; //убираем отступы которые может добавить браузер по умолчанию
         padding: 0;
-        background: #0d0e1b;
+        background: #07070f;
         color: #fff;
         font-family: 'Montserrat', sans-serif;
     }
