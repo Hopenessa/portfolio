@@ -13,7 +13,8 @@ import {
     CardTitle,
     CardText,
     CardLinks,
-    CardLink
+    CardLink,
+    ImageLink
 } from "./Card.styles.ts";
 
 import {Icon} from "../../sprites/Icon.tsx";
@@ -27,7 +28,12 @@ export const Card = ({
                      }: ProjectCardProps): JSX.Element => {
     return (
         <CardSection>
+            <ImageLink  href={liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer">
             <CardImage src={image} alt={title}/>
+
+            </ImageLink>
 
             <CardBody>
                 <CardTitle>{title}</CardTitle>
