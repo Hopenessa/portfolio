@@ -4,10 +4,12 @@ import {
     HeaderWrapper,
     HeaderNavItem,
     HeaderNavList,
+    LogoWrapper
 } from "./Header.styles.ts";
 import {Container} from "../../Shared/Container.ts";
 import {FlexWrapper} from "../../Shared/FlexWrapper.ts";
 import {scrollToSection} from "../../Shared/ScrollToSections.ts";
+import {Icon} from "../../sprites/Icon.tsx";
 
 
 const items = ["HOME", "PROJECTS", "SKILLS", "ABOUT ME", "CONTACTS"];
@@ -68,6 +70,16 @@ export default function Header(): JSX.Element {
         <HeaderWrapper>
             <Container>
                 <FlexWrapper $direction="row">
+                    <LogoWrapper>
+                        <Icon
+                            id="logoSvg"
+                            width={50}
+                            height={50}
+                            viewBox="0 0 454 454"
+                            iconColor="#ffffff"
+                            iconHover="none"
+                        />
+                    </LogoWrapper>
                     <HeaderNav>
                         <HeaderNavList>
                             {items.map((item) => (

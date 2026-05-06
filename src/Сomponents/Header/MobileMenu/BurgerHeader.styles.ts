@@ -32,7 +32,7 @@ export const BurgerButton = styled.button<BurgerButtonProps>`
     align-items: center;
     justify-content: center;
 
-    background: #090a14;
+    background: #07070f;
     border: none;
     border-radius: 10px;
 
@@ -52,7 +52,7 @@ export const CloseButton = styled.button`
     align-items: center;
     justify-content: center;
 
-    background: #090a14;
+    background: #07070f;
     border: none;
     border-radius: 10px;
 
@@ -68,7 +68,7 @@ export const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
     width: 280px;
     height: 100vh;
 
-    background: #090a14;
+    background: #07070f;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
 
     transform: ${({ $isOpen }) =>

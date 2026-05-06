@@ -10,18 +10,30 @@ export const HeaderWrapper = styled.header`
     width: 100%;
     height: 70px;
 
-    background: #090a14;
-    box-shadow: 0 0 50px 10px #000000;
+    background: #07070f;
+    box-shadow: 0 0 50px 10px #07070f;
     z-index: 1000;
 
     display: flex;
 
     @media ${Theme.media.mobile} {
-        background: #090a14;
+        background: #07070f;
         box-shadow: none;
         z-index: 1;
         position: relative;
     }
+`;
+
+export const LogoWrapper = styled.div`
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 `;
 
 export const HeaderNav = styled.div`
