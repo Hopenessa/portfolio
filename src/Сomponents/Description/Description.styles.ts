@@ -4,7 +4,8 @@ import {Theme} from "../../styles/Theme";
 
 export const DescriptionSection = styled.section`
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
+    padding: clamp(70px, 8vw, 120px) 0;
 
     display: flex;
     flex-direction: column;
@@ -32,13 +33,9 @@ export const DescriptionSection = styled.section`
 `;
 
 export const ContentWrapper = styled.div`
-    margin-top: auto;
-    margin-bottom: 15vh;
-
-    @media ${Theme.media.mobile} {
-        margin-bottom: 10vh
-    }
-    
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 `;
 
 export const DescriptionTitle = styled.h2`
@@ -59,6 +56,7 @@ export const DescriptionTitle = styled.h2`
 `;
 
 export const DescriptionText = styled.p`
+    white-space: pre-line;
    
     max-width: 800px;
     font-family: Montserrat, sans-serif;
@@ -71,7 +69,6 @@ export const DescriptionText = styled.p`
     text-align: center;
 
     @media ${Theme.media.mobile} {
-        margin-bottom: 10vh;
         font-size: 1.1rem;
     }
     

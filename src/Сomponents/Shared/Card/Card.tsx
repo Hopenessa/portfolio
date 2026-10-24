@@ -2,6 +2,7 @@ type ProjectCardProps = {
     image: string;
     title: string;
     description: string;
+    techStack?: string;
     liveUrl: string;
     codeUrl: string;
 };
@@ -23,6 +24,7 @@ export const Card = ({
                          image,
                          title,
                          description,
+                         techStack,
                          liveUrl,
                          codeUrl
                      }: ProjectCardProps): JSX.Element => {
@@ -39,14 +41,15 @@ export const Card = ({
                 <CardTitle>{title}</CardTitle>
 
                 <CardText>{description}</CardText>
+                {techStack && <CardText style={{ marginTop: "16px" }}>Tech stack: {techStack}</CardText>}
 
                 <CardLinks>
-                    <CardLink href={liveUrl}>
+                    <CardLink href={liveUrl} target="_blank" rel="noopener noreferrer">
                         <Icon id="linkSvg" width={20} height={20} viewBox="0 0 16 16" iconColor="#ff9200" iconHover="none"/>
                         Live Preview
                     </CardLink>
 
-                    <CardLink href={codeUrl}>
+                    <CardLink href={codeUrl} target="_blank" rel="noopener noreferrer">
                         <Icon id="githubSvg" width={20} height={20} viewBox="0 0 16 16" iconColor="#ff9200" iconHover="none"/>
                         View Code
                     </CardLink>

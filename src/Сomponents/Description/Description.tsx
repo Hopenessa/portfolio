@@ -21,16 +21,11 @@ export default function Description() {
                         <Fade direction={"down"} triggerOnce={true}>
                             <DescriptionTitle>About me</DescriptionTitle>
                             <DescriptionText>
-                                Hello everyone! My name is Nadezhda, and I am a web developer from Russia.
-
-                                I’m currently at an early stage of my development journey, but I’ve already gained
-                                practical experience with React, TypeScript, and Styled Components, along with other
-                                modern frontend tools. I focus on building clean, responsive interfaces and continuously
-                                improving my skills through hands-on projects.
-
-                                Right now I’m actively strengthening my knowledge and working on expanding my portfolio
-                                with real-world projects. I’m motivated to grow as a developer and open to collaboration
-                                and new opportunities.
+                                Hi, I’m Nadezhda, a frontend developer based in Russia. I create websites for people who want to share their work, introduce their business, or build an online presence.
+                                {"\n\n"}
+                                I enjoy both the visual and technical sides of building a website. I can develop an original design around your ideas or work from a design you already have, paying attention to layout, typography, imagery, and how everything works across different screen sizes.
+                                {"\n\n"}
+                                I work with React, TypeScript, and styled-components, and continue to develop my skills through practical projects. I’m open to freelance projects and collaboration, and would love to hear what you have in mind.
                             </DescriptionText>
                         </Fade>
                     </ContentWrapper>

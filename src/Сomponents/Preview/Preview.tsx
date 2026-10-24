@@ -42,9 +42,7 @@ export default function Preview(): JSX.Element {
                             </PreviewLabel>
                             <PreviewName>Hopenessa</PreviewName>
                             <PreviewText>
-                                Frontend developer building web applications with React and TypeScript. I focus on
-                                creating structured, maintainable and responsive interfaces. I care about performance
-                                and consistency across devices. My work is aimed at practical and scalable solutions.
+                                I build custom websites for creatives, independent professionals, and small businesses — from personal portfolios to business websites. I can create an original design from scratch or bring your existing design to life, building responsive websites that showcase your work and help clients get in touch.
                             </PreviewText>
                             <LinkButton onClick={() => scrollToSection("contacts")}>Contact me</LinkButton>
                             </Fade>

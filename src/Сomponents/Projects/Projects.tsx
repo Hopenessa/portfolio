@@ -3,15 +3,17 @@ import {Container} from "../Shared/Container.ts";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 import { Card } from "../Shared/Card/Card.tsx";
 import Image from "../../assets/images/CardImage.webp"
+import GoldenMustangImage from "../../assets/images/GoldenMustangStudio.webp";
 import { Fade } from "react-awesome-reveal";
 
 const projects = [
     {
-        image: Image,
-        title: "Project Tile goes here",
-        description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        liveUrl: "#",
-        codeUrl: "#"
+        image: GoldenMustangImage,
+        title: "Golden Mustang Studio",
+        description: "A tattoo artist’s portfolio designed and built from scratch, with custom image editing and background replacement to match the visual style. Features a responsive layout, an interactive gallery, subtle animations, and optimized images.",
+        techStack: "React, TypeScript, styled-components, Vite.",
+        liveUrl: "https://hopenessa.github.io/Portfolio_Grace_Darling/",
+        codeUrl: "https://github.com/Hopenessa/Portfolio_Grace_Darling"
     },
     {
         image: Image,
@@ -27,27 +29,6 @@ const projects = [
         liveUrl: "#",
         codeUrl: "#"
     },
-    {
-        image: Image,
-        title: "Project Tile goes here",
-        description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        liveUrl: "#",
-        codeUrl: "#"
-    },
-    {
-        image: Image,
-        title: "Project Tile goes here",
-        description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        liveUrl: "#",
-        codeUrl: "#"
-    },
-    {
-        image: Image,
-        title: "Project Tile goes here",
-        description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        liveUrl: "#",
-        codeUrl: "#"
-    }
 
 ];
 

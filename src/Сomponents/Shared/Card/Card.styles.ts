@@ -2,7 +2,8 @@ import styled from "styled-components";
 import {Theme} from "../../../styles/Theme.ts";
 
 export const CardSection = styled.div`
-    height: 500px;
+    min-height: 500px;
+    height: 100%;
 
     background: #0D0E1B;
     backdrop-filter: blur(10px);
@@ -32,13 +33,15 @@ export const CardSection = styled.div`
 
 export const ImageLink = styled.a`
     display: block;
+    flex-shrink: 0;
     text-decoration: none;
 `;
 
 
 export const CardImage = styled.img`
+    display: block;
     width: 100%;
-    height: 200px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
 `;
 
@@ -48,7 +51,7 @@ export const CardBody = styled.div`
     display: flex;
     flex-direction: column;
     
-    height: 100%;
+    flex: 1;
 `;
 
 export const CardTitle = styled.h3`
