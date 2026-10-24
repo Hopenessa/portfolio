@@ -16,11 +16,6 @@ import {Slide} from "react-awesome-reveal";
 
 const icons = [
     {
-        id: "githubSvg",
-        label: "GitHub",
-        url: "https://github.com/Hopenessa"
-    },
-    {
         id: "telegramSvg",
         label: "Telegram",
         url: "https://t.me/persik_redhead"
@@ -29,6 +24,11 @@ const icons = [
         id: "whatsappSvg",
         label: "WhatsApp",
         url: "https://wa.me/79957875078"
+    },
+    {
+        id: "githubSvg",
+        label: "GitHub",
+        url: "https://github.com/Hopenessa"
     }
 ];
 
