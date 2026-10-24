@@ -50,6 +50,17 @@ export const FormWrapper = styled.form`
     gap: 25px;
     padding-bottom: 20px;
     align-items: center;
+
+    button:disabled {
+        opacity: 0.65;
+        cursor: wait;
+        transform: none;
+    }
+
+    input:focus-visible, textarea:focus-visible, button:focus-visible {
+        outline: 2px solid #ff9200;
+        outline-offset: 3px;
+    }
     
 `;
 
@@ -127,5 +138,30 @@ export const ContactsLink = styled.a`
     justify-content: center;
 
     text-decoration: none;
+
+    &:focus-visible {
+        outline: 2px solid #ff9200;
+        outline-offset: 5px;
+    }
+`;
+
+export const ContactsIntro = styled.p`
+    max-width: 700px;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+`;
+
+export const FormStatus = styled.p<{$isError: boolean}>`
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+    color: ${({$isError}) => $isError ? '#ffb4ab' : '#b5e8c3'};
+
+    &:empty {
+        display: none;
+    }
 `;
 

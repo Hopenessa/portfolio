@@ -3,7 +3,7 @@ import {
     ContactsSection,
     ContactsLinks,
     ContactsItem,
-    ContactsLink, FormGroup
+    ContactsLink, FormGroup, ContactsIntro, FormStatus
 } from "./Contacts.styles.ts";
 
 import {Icon} from "../sprites/Icon.tsx";
@@ -11,32 +11,44 @@ import {Container} from "../Shared/Container.ts";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 import {ContactsTitle, FormWrapper, FormLabel, Input, Textarea} from "./Contacts.styles.ts";
 import {Button} from "../Shared/Button.ts";
-import React, {ElementRef, useRef} from "react";
+import React, {ElementRef, useRef, useState} from "react";
 import {Slide} from "react-awesome-reveal";
 
 const icons = [
     {
         id: "githubSvg",
+        label: "GitHub",
         url: "https://github.com/Hopenessa"
     },
     {
         id: "telegramSvg",
+        label: "Telegram",
         url: "https://t.me/persik_redhead"
     },
     {
         id: "whatsappSvg",
-        url: "https://wa.me/89957875078"
+        label: "WhatsApp",
+        url: "https://wa.me/79957875078"
     }
 ];
 
 
 export default function Contacts(): JSX.Element {
     const form = useRef<ElementRef<'form'>>(null);
+    const sending = useRef(false);
+    const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (!form.current) return
+        if (!form.current || sending.current) return;
+
+        const message = form.current.elements.namedItem('message') as HTMLTextAreaElement;
+        message.setCustomValidity(message.value.trim() ? '' : 'Please enter a message.');
+        if (!form.current.reportValidity()) return;
+
+        sending.current = true;
+        setStatus('sending');
 
         emailjs
             .sendForm('service_wsckydz', 'template_l29kb6x', form.current, {
@@ -44,13 +56,15 @@ export default function Contacts(): JSX.Element {
             })
             .then(
                 () => {
-                    console.log("SUCCESS!");
+                    setStatus('success');
                     form.current?.reset();
                 },
-                (error) => {
-                    console.log("FAILED...", error.text);
+                () => {
+                    setStatus('error');
                 }
-            );
+            ).finally(() => {
+                sending.current = false;
+            });
     }
     return (
         <ContactsSection id="contacts">
@@ -58,27 +72,34 @@ export default function Contacts(): JSX.Element {
                 <Slide triggerOnce={true} direction={"up"}>
                     <FlexWrapper $direction="column">
                         <ContactsTitle>Contact me</ContactsTitle>
-                        <FormWrapper ref={form} onSubmit={sendEmail}>
+                        <ContactsIntro>Have a project in mind? I’d love to hear about it. Use the form below or message me on Telegram or WhatsApp — whichever works best for you.</ContactsIntro>
+                        <FormWrapper ref={form} onSubmit={sendEmail} aria-busy={status === 'sending'}>
                             <FormGroup>
-                                <FormLabel>Email :</FormLabel>
-                                <Input placeholder="example@gmail.com" name={'email'}/>
+                                <FormLabel htmlFor="contact-email">Email (required)</FormLabel>
+                                <Input id="contact-email" type="email" autoComplete="email" placeholder="example@gmail.com" name="email" required readOnly={status === 'sending'}/>
                             </FormGroup>
 
                             <FormGroup>
-                                <FormLabel>Name :</FormLabel>
-                                <Input placeholder="Mr. Example" name={'name'}/>
+                                <FormLabel htmlFor="contact-name">Name (optional)</FormLabel>
+                                <Input id="contact-name" autoComplete="name" placeholder="Your name" name="name" readOnly={status === 'sending'}/>
                             </FormGroup>
                             <FormGroup>
-                                <FormLabel>Message :</FormLabel>
-                                <Textarea placeholder="Let’s work together!" name={'message'}/>
+                                <FormLabel htmlFor="contact-message">Message (required)</FormLabel>
+                                <Textarea id="contact-message" placeholder="Let’s work together!" name="message" required readOnly={status === 'sending'} onChange={(event) => event.currentTarget.setCustomValidity('')}/>
                             </FormGroup>
-                            <Button type="submit">Send message</Button>
+                            <Button type="submit" disabled={status === 'sending'}>
+                                {status === 'sending' ? 'Sending…' : 'Send message'}
+                            </Button>
+                            <FormStatus role="status" aria-live="polite" aria-atomic="true" $isError={status === 'error'}>
+                                {status === 'success' && 'Message sent successfully. Thank you for getting in touch!'}
+                                {status === 'error' && 'Something went wrong. Please try again or contact me via Telegram or WhatsApp.'}
+                            </FormStatus>
                         </FormWrapper>
 
                         <ContactsLinks>
-                            {icons.map(({id, url}) => (
+                            {icons.map(({id, url, label}) => (
                                 <ContactsItem key={id}>
-                                    <ContactsLink href={url} target="_blank" rel="noopener noreferrer">
+                                    <ContactsLink href={url} target="_blank" rel="noopener noreferrer" aria-label={label} title={label}>
                                         <Icon
                                             id={id}
                                             width={40}
