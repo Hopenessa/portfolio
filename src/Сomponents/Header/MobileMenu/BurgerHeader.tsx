@@ -123,7 +123,7 @@ export default function BurgerHeader(): JSX.Element {
                                     closeMenu()
                                 }}
                             >
-                                {item}
+                                {item === "CONTACTS" ? "CONTACT" : item}
                             </MobileNavItem>
                         ))}
                     </MobileNavList>

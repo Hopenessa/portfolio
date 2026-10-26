@@ -4,6 +4,7 @@ import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 import { Card } from "../Shared/Card/Card.tsx";
 import Image from "../../assets/images/CardImage.webp"
 import GoldenMustangImage from "../../assets/images/GoldenMustangStudio.webp";
+import WoodlandKreaturesImage from "../../assets/images/WoodlandKreatures.webp";
 import { Fade } from "react-awesome-reveal";
 
 const projects = [
@@ -16,11 +17,12 @@ const projects = [
         codeUrl: "https://github.com/Hopenessa/Portfolio_Grace_Darling"
     },
     {
-        image: Image,
-        title: "Project Tile goes here",
-        description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        liveUrl: "#",
-        codeUrl: "#"
+        image: WoodlandKreaturesImage,
+        title: "Woodland Kreatures",
+        description: "A portfolio website for an art doll creator, designed and built from scratch around an enchanted woodland theme. Features a custom background created specifically for the project, softly twinkling fireflies, an automatic gallery, and an image viewer with keyboard navigation. Includes a responsive layout and mobile navigation.",
+        techStack: "React, TypeScript, styled-components, Vite.",
+        liveUrl: "https://hopenessa.github.io/Woodland_Kreatures/",
+        codeUrl: "https://github.com/Hopenessa/Woodland_Kreatures"
     },
     {
         image: Image,

@@ -81,7 +81,7 @@ export default function Header(): JSX.Element {
                                         $active={active === item}
                                         onClick={() => scrollToSection(item.toLowerCase())}
                                     >
-                                        {item}
+                                        {item === "CONTACTS" ? "CONTACT" : item}
                                     </HeaderNavItem>
                                 </li>
                             ))}
