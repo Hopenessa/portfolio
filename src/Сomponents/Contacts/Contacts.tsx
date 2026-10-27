@@ -12,7 +12,7 @@ import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 import {ContactsTitle, FormWrapper, FormLabel, Input, Textarea} from "./Contacts.styles.ts";
 import {Button} from "../Shared/Button.ts";
 import React, {ElementRef, useRef, useState} from "react";
-import {Slide} from "react-awesome-reveal";
+import {useTypingPlaceholders} from "./useTypingPlaceholders.ts";
 
 const icons = [
     {
@@ -35,6 +35,7 @@ const icons = [
 
 export default function Contacts(): JSX.Element {
     const form = useRef<ElementRef<'form'>>(null);
+    const {placeholders, finishField} = useTypingPlaceholders(form);
     const sending = useRef(false);
     const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
@@ -69,23 +70,22 @@ export default function Contacts(): JSX.Element {
     return (
         <ContactsSection id="contacts">
             <Container>
-                <Slide triggerOnce={true} direction={"up"}>
                     <FlexWrapper $direction="column">
                         <ContactsTitle>Contact me</ContactsTitle>
                         <ContactsIntro>Have a project in mind? I’d love to hear about it. Use the form below or message me on Telegram or WhatsApp — whichever works best for you.</ContactsIntro>
                         <FormWrapper ref={form} onSubmit={sendEmail} aria-busy={status === 'sending'}>
                             <FormGroup>
                                 <FormLabel htmlFor="contact-email">Email (required)</FormLabel>
-                                <Input id="contact-email" type="email" autoComplete="email" placeholder="example@gmail.com" name="email" required readOnly={status === 'sending'}/>
+                                <Input id="contact-email" type="email" autoComplete="email" placeholder={placeholders.email} onFocus={() => finishField('email')} onInput={() => finishField('email')} name="email" required readOnly={status === 'sending'}/>
                             </FormGroup>
 
                             <FormGroup>
                                 <FormLabel htmlFor="contact-name">Name (optional)</FormLabel>
-                                <Input id="contact-name" autoComplete="name" placeholder="Your name" name="name" readOnly={status === 'sending'}/>
+                                <Input id="contact-name" autoComplete="name" placeholder={placeholders.name} onFocus={() => finishField('name')} onInput={() => finishField('name')} name="name" readOnly={status === 'sending'}/>
                             </FormGroup>
                             <FormGroup>
                                 <FormLabel htmlFor="contact-message">Message (required)</FormLabel>
-                                <Textarea id="contact-message" placeholder="Let’s work together!" name="message" required readOnly={status === 'sending'} onChange={(event) => event.currentTarget.setCustomValidity('')}/>
+                                <Textarea id="contact-message" placeholder={placeholders.message} onFocus={() => finishField('message')} onInput={() => finishField('message')} name="message" required readOnly={status === 'sending'} onChange={(event) => event.currentTarget.setCustomValidity('')}/>
                             </FormGroup>
                             <Button type="submit" disabled={status === 'sending'}>
                                 {status === 'sending' ? 'Sending…' : 'Send message'}
@@ -113,7 +113,6 @@ export default function Contacts(): JSX.Element {
                             ))}
                         </ContactsLinks>
                     </FlexWrapper>
-                </Slide>
             </Container>
         </ContactsSection>
     );

@@ -6,7 +6,6 @@ import {
 import {Frame} from "../sprites/Frame.tsx";
 import {Container} from "../Shared/Container.ts";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
-import {Fade} from "react-awesome-reveal";
 
 
 export default function Description() {
@@ -18,7 +17,6 @@ export default function Description() {
 
                 <FlexWrapper $direction="column">
                     <ContentWrapper>
-                        <Fade direction={"down"} triggerOnce={true}>
                             <DescriptionTitle>About me</DescriptionTitle>
                             <DescriptionText>
                                 Hi, I’m Nadezhda, a frontend developer based in Russia. I create websites for people who want to share their work, introduce their business, or build an online presence.
@@ -27,7 +25,6 @@ export default function Description() {
                                 {"\n\n"}
                                 I work with React, TypeScript, and styled-components, and continue to develop my skills through practical projects. I’m open to freelance projects and collaboration, and would love to hear what you have in mind.
                             </DescriptionText>
-                        </Fade>
                     </ContentWrapper>
 
                 </FlexWrapper>
