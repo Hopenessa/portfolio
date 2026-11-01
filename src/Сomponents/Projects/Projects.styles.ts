@@ -41,7 +41,8 @@ export const ProjectsTitle = styled.h2`
 
 export const ProjectsGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 450px));
     justify-content: center;
     gap: 30px;
     margin-bottom: 20px;

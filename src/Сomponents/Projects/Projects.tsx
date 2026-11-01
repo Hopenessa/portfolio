@@ -29,6 +29,7 @@ const projects = [
     },
     {
         image: Image,
+        hidden: true,
         title: "Project Tile goes here",
         description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
         liveUrl: "#",
@@ -50,7 +51,7 @@ export default function Projects(): JSX.Element {
                               damping={0.2}
                               duration={700}
                               triggerOnce>
-                        {projects.map((project, i) => (
+                        {projects.filter(project => !project.hidden).map((project, i) => (
                             <Card key={i} {...project} />
                         ))}
                         </Fade>
