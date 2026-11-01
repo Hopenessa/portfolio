@@ -11,10 +11,13 @@ const projects = [
     {
         image: GoldenMustangImage,
         title: "Golden Mustang Studio",
-        description: "A tattoo artist’s portfolio designed and built from scratch, with custom image editing and background replacement to match the visual style. Features a responsive layout, an interactive gallery, subtle animations, and optimized images.",
-        techStack: "React, TypeScript, styled-components, Vite.",
-        liveUrl: "https://hopenessa.github.io/Portfolio_Grace_Darling/",
-        codeUrl: "https://github.com/Hopenessa/Portfolio_Grace_Darling"
+        description: "A custom tattoo artist’s portfolio with a complete appointment management system. Designed and built from scratch, with responsive layouts, an interactive gallery, subtle animations, and optimized imagery.\n\nIncludes session booking, consultation requests, live availability updates, and a secure admin dashboard. A Telegram bot handles booking notifications, confirmations, rescheduling, and reminders.",
+        techStack: "React, TypeScript, styled-components, Vite, Node.js, SQLite, Telegram Bot API.",
+        liveUrl: "https://goldenmustangstudio.com/",
+        codeUrl: "https://github.com/Hopenessa/tattoo-studio-fullstack-demo",
+        liveLabel: "Live Website",
+        codeLabel: "View Early Frontend",
+        codeNote: "Links to the demo repository."
     },
     {
         image: WoodlandKreaturesImage,

@@ -5,6 +5,9 @@ type ProjectCardProps = {
     techStack?: string;
     liveUrl: string;
     codeUrl: string;
+    liveLabel?: string;
+    codeLabel?: string;
+    codeNote?: string;
 };
 
 import {
@@ -15,7 +18,9 @@ import {
     CardText,
     CardLinks,
     CardLink,
-    ImageLink
+    ImageLink,
+    CodeLinkGroup,
+    CodeNote
 } from "./Card.styles.ts";
 
 import {Icon} from "../../sprites/Icon.tsx";
@@ -26,7 +31,10 @@ export const Card = ({
                          description,
                          techStack,
                          liveUrl,
-                         codeUrl
+                         codeUrl,
+                         liveLabel = "Live Preview",
+                         codeLabel = "View Code",
+                         codeNote
                      }: ProjectCardProps): JSX.Element => {
     return (
         <CardSection>
@@ -46,13 +54,16 @@ export const Card = ({
                 <CardLinks>
                     <CardLink href={liveUrl} target="_blank" rel="noopener noreferrer">
                         <Icon id="linkSvg" width={20} height={20} viewBox="0 0 16 16" iconColor="#ff9200" iconHover="none"/>
-                        Live Preview
+                        {liveLabel}
                     </CardLink>
 
-                    <CardLink href={codeUrl} target="_blank" rel="noopener noreferrer">
+                    <CodeLinkGroup>
+                    <CardLink href={codeUrl} target="_blank" rel="noopener noreferrer" title={codeNote}>
                         <Icon id="githubSvg" width={20} height={20} viewBox="0 0 16 16" iconColor="#ff9200" iconHover="none"/>
-                        View Code
+                        {codeLabel}
                     </CardLink>
+                    {codeNote && <CodeNote>{codeNote}</CodeNote>}
+                    </CodeLinkGroup>
                 </CardLinks>
             </CardBody>
         </CardSection>
