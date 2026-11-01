@@ -84,33 +84,21 @@ export const CardLinks = styled.div`
     margin-top: auto; //прижимает ссылку вниз контейнера
 
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 16px;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
     justify-content: space-between; //распределяет по контейнеру не оставляя отступов слева и справа
 
     padding-top: 15px;
 `;
 
-export const CodeLinkGroup = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-`;
-
-export const CodeNote = styled.small`
-    max-width: 190px;
-    font-size: 0.8rem;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.6);
-`;
-
 export const CardLink = styled.a`
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
+    white-space: nowrap;
 
-    font-size: 1rem;
+    font-size: 0.875rem;
     background: linear-gradient(90deg, #ff6200, #ffcc00);
 
     -webkit-background-clip: text;

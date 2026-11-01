@@ -18,9 +18,7 @@ import {
     CardText,
     CardLinks,
     CardLink,
-    ImageLink,
-    CodeLinkGroup,
-    CodeNote
+    ImageLink
 } from "./Card.styles.ts";
 
 import {Icon} from "../../sprites/Icon.tsx";
@@ -57,13 +55,10 @@ export const Card = ({
                         {liveLabel}
                     </CardLink>
 
-                    <CodeLinkGroup>
                     <CardLink href={codeUrl} target="_blank" rel="noopener noreferrer" title={codeNote}>
                         <Icon id="githubSvg" width={20} height={20} viewBox="0 0 16 16" iconColor="#ff9200" iconHover="none"/>
                         {codeLabel}
                     </CardLink>
-                    {codeNote && <CodeNote>{codeNote}</CodeNote>}
-                    </CodeLinkGroup>
                 </CardLinks>
             </CardBody>
         </CardSection>

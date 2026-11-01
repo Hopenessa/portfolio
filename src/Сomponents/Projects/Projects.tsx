@@ -16,7 +16,7 @@ const projects = [
         liveUrl: "https://goldenmustangstudio.com/",
         codeUrl: "https://github.com/Hopenessa/tattoo-studio-fullstack-demo",
         liveLabel: "Live Website",
-        codeLabel: "View Early Frontend",
+        codeLabel: "View Demo Code",
         codeNote: "Links to the demo repository."
     },
     {
