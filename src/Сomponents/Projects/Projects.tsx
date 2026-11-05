@@ -11,8 +11,7 @@ const projects = [
     {
         image: GoldenMustangImage,
         title: "Golden Mustang Studio",
-        description: "A custom tattoo artist’s portfolio with a complete appointment management system. Designed and built from scratch, with responsive layouts, an interactive gallery, subtle animations, and optimized imagery.\n\nIncludes session booking, consultation requests, live availability updates, and a secure admin dashboard. A Telegram bot handles booking notifications, confirmations, rescheduling, and reminders.",
-        techStack: "React, TypeScript, styled-components, Vite, Node.js, SQLite, Telegram Bot API.",
+        description: "A custom tattoo artist’s portfolio, designed and built from scratch with a complete appointment management system. Features a responsive layout, an interactive gallery, session booking, consultation requests, and live availability. Includes a secure admin dashboard and a Telegram bot for booking notifications, confirmations, rescheduling, and reminders.",
         liveUrl: "https://goldenmustangstudio.com/",
         codeUrl: "https://github.com/Hopenessa/tattoo-studio-fullstack-demo",
         liveLabel: "Live Website",
@@ -30,7 +29,7 @@ const projects = [
     {
         image: FilmTheatreImage,
         title: "Film & Theatre Portfolio",
-        description: "A portfolio website for a director and writer working across film and theatre. Designed and built from scratch, with a cinematic graphite-and-gold palette, responsive layouts, custom decorative elements, and subtle animations.\n\nFeatures an interactive film showcase with YouTube links and a PDF script reader with fullscreen viewing, adjustable zoom, warm page colours, and enhanced text weight. Includes keyboard navigation, screen reader support and SEO metadata.",
+        description: "A portfolio for a film and theatre director and writer, designed and built from scratch with a cinematic graphite-and-gold palette. Features a responsive layout, an interactive film showcase, and a PDF script reader with fullscreen viewing, zoom, and reading adjustments. Includes subtle animations, keyboard navigation, screen reader support, and SEO metadata.",
         techStack: "React, TypeScript, styled-components, Vite, PDF.js.",
         liveUrl: "https://hopenessa.github.io/grace_films_portfolio/",
         codeUrl: "https://github.com/Hopenessa/grace_films_portfolio"
