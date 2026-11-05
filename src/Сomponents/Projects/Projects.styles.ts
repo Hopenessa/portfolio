@@ -42,9 +42,17 @@ export const ProjectsTitle = styled.h2`
 export const ProjectsGrid = styled.div`
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 450px));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-content: center;
     gap: 30px;
     margin-bottom: 20px;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 680px) {
+        grid-template-columns: minmax(0, 450px);
+    }
     
 `;
