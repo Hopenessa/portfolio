@@ -1,11 +1,11 @@
 import {ProjectSection, ProjectsGrid, ProjectsTitle} from "./Projects.styles.ts";
 import {Container} from "../Shared/Container.ts";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
-import { Card } from "../Shared/Card/Card.tsx";
+import {Card} from "../Shared/Card/Card.tsx";
 import FilmTheatreImage from "../../assets/images/FilmTheatrePortfolio.webp";
 import GoldenMustangImage from "../../assets/images/GoldenMustangStudio.webp";
 import WoodlandKreaturesImage from "../../assets/images/WoodlandKreatures.webp";
-import { Fade } from "react-awesome-reveal";
+import {Fade} from "react-awesome-reveal";
 
 const projects = [
     {
@@ -30,7 +30,7 @@ const projects = [
     {
         image: FilmTheatreImage,
         title: "Film & Theatre Portfolio",
-        description: "A portfolio website for a director and writer working across film and theatre. Designed and built from scratch, with a cinematic graphite-and-gold palette, responsive layouts, custom decorative elements, and subtle animations.\n\nFeatures an interactive film showcase with YouTube links and a PDF script reader with fullscreen viewing, adjustable zoom, warm page colours, and enhanced text weight. Includes keyboard navigation, screen reader support, SEO metadata, and automated deployment to GitHub Pages.",
+        description: "A portfolio website for a director and writer working across film and theatre. Designed and built from scratch, with a cinematic graphite-and-gold palette, responsive layouts, custom decorative elements, and subtle animations.\n\nFeatures an interactive film showcase with YouTube links and a PDF script reader with fullscreen viewing, adjustable zoom, warm page colours, and enhanced text weight. Includes keyboard navigation, screen reader support and SEO metadata.",
         techStack: "React, TypeScript, styled-components, Vite, PDF.js.",
         liveUrl: "https://hopenessa.github.io/grace_films_portfolio/",
         codeUrl: "https://github.com/Hopenessa/grace_films_portfolio"
@@ -39,10 +39,9 @@ const projects = [
 ];
 
 
-
 export default function Projects(): JSX.Element {
     return (
-        <ProjectSection id = "projects">
+        <ProjectSection id="projects">
             <Container>
                 <FlexWrapper $direction="column">
                     <ProjectsTitle>Projects</ProjectsTitle>
@@ -51,9 +50,9 @@ export default function Projects(): JSX.Element {
                               damping={0.2}
                               duration={700}
                               triggerOnce>
-                        {projects.map((project, i) => (
-                            <Card key={i} {...project} />
-                        ))}
+                            {projects.map((project, i) => (
+                                <Card key={i} {...project} />
+                            ))}
                         </Fade>
                     </ProjectsGrid>
                 </FlexWrapper>
