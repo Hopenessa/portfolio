@@ -12,6 +12,7 @@ const projects = [
         image: GoldenMustangImage,
         title: "Golden Mustang Studio",
         description: "A custom tattoo artist’s portfolio, designed and built from scratch with a complete appointment management system. Features a responsive layout, an interactive gallery, session booking, consultation requests, and live availability. Includes a secure admin dashboard and a Telegram bot for booking notifications, confirmations, rescheduling, and reminders.",
+        techStack: "React, TypeScript, styled-components, Vite, Node.js, SQLite, Telegram Bot API.",
         liveUrl: "https://goldenmustangstudio.com/",
         codeUrl: "https://github.com/Hopenessa/tattoo-studio-fullstack-demo",
         liveLabel: "Live Website",
